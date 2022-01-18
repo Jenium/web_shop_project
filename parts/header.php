@@ -20,4 +20,25 @@
 <body>
 <div class="wrapper">
 
-header
+    <header>
+        <div class="navigation-head">
+            <div class="menu">
+                <a href="#" class="menu-item logo"></a>
+                <a href="#" class="menu-item">Женщинам</a>
+                <a href="#" class="menu-item">Мужчинам</a>
+                <a href="#" class="menu-item">Детям</a>
+                <a href="#" class="menu-item">Новинки</a>
+                <a href="#" class="menu-item">О нас</a>
+            </div>
+            <div class="account">
+                <a class="account-logining" href="#">
+                    <div class="account-logining-icon icon-login"></div>
+                    <span>Войти</span>
+                </a>
+                <a class="account-logining" href="#">
+                    <div class="account-logining-icon icon-basket"></div>
+                    <span>Корзина(0)</span>
+                </a>
+            </div>
+        </div>
+    </header>

@@ -7,14 +7,78 @@
 }
 
 body {
-    background-color: #fff;
+    background-color: #e5e5e5;
     font-family: Arial, Helvetica, sans-serif;
+    padding: 60px 0;
+}
+
+a {
+    text-decoration: none;
 }
 
 // общий контейнер
 .wrapper {
+    background-color: #fff;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+// меню в Header
+.navigation-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 36px 30px;
+    font-family: 'Myriad Pro', sans-serif;
+    font-size: 14px;
+    color: #303030;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+
+    &-item {
+        margin: 0 5px;
+        padding: 10px;
+        color: #303030;
+        
+        &.logo {
+            background: #000 url('../images/icons/logo.jpg') no-repeat;
+            background-size: contain;
+            width: 42px;
+            height: 42px;
+            // display: block;
+            margin-right: 48px;
+        }
+    }
+}
+
+.account {
+    display: flex;
+    align-items: center;
+
+    &-logining {
+        color: #303030;
+        display: flex;
+        align-items: center;
+        margin-left: 40px;
+
+        &-icon {
+            width: 28px;
+            height: 28px;
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            &.icon-login {
+                background-image: url('../images/icons/account.png');
+            }
+
+            &.icon-basket {
+                background-image: url('../images/icons/basket.png');
+            }
+        }
+    }
 }
 
 // Лоадер

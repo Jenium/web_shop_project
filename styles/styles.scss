@@ -25,6 +25,7 @@ a {
 
 // меню в Header
 .navigation-head {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -32,6 +33,16 @@ a {
     font-family: 'Myriad Pro', sans-serif;
     font-size: 14px;
     color: #303030;
+    margin-bottom: 30px;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        width: 1140px;
+        height: 1px;
+        background-color: #e5e5e5;
+    }
 }
 
 .menu {
@@ -49,7 +60,7 @@ a {
             width: 42px;
             height: 42px;
             // display: block;
-            margin-right: 48px;
+            margin: 0 48px 0 0;
         }
     }
 }
@@ -79,6 +90,13 @@ a {
             }
         }
     }
+}
+
+.line-head {
+    background: #e5e5e5;
+    width: 1140px;
+    height: 1px;
+    margin: 0 auto 30px;
 }
 
 // Лоадер

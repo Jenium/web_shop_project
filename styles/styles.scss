@@ -1,4 +1,4 @@
-    /* Общие стили для всех страниц */
+/* Общие стили для всех страниц */
 
 * {
     margin: 0;
@@ -31,13 +31,13 @@ a {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 30px;
-    font-family: 'Myriad Pro', sans-serif;
+    font-family: "Myriad Pro", sans-serif;
     font-size: 14px;
     color: #303030;
     margin-bottom: 30px;
 
     &::after {
-        content: '';
+        content: "";
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -54,9 +54,9 @@ a {
         margin: 0 5px;
         padding: 10px;
         color: #303030;
-        
+
         &.logo {
-            background: #000 url('../images/icons/logo.jpg') no-repeat;
+            background: #000 url("../images/icons/logo.jpg") no-repeat;
             background-size: contain;
             width: 42px;
             height: 42px;
@@ -83,11 +83,11 @@ a {
             background-repeat: no-repeat;
 
             &.icon-login {
-                background-image: url('../images/icons/account.png');
+                background-image: url("../images/icons/account.png");
             }
 
             &.icon-basket {
-                background-image: url('../images/icons/basket.png');
+                background-image: url("../images/icons/basket.png");
             }
         }
     }
@@ -100,6 +100,60 @@ a {
     margin: 0 auto 30px;
 }
 
+// Разделы в Футере
+.footer-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+
+.chapter {
+    color: #303030;
+    // margin: 30px auto;
+    padding-bottom: 15px;
+
+    &-wrap {
+        width: calc(100% / 3);
+        display: flex;
+        justify-content: center;
+
+        &.col-line {
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                background-color: #e5e5e5;
+            }
+
+            &::before {
+                left: 0;
+            }
+
+            &::after {
+                right: 0;
+            }
+        }
+    }
+
+    &-title {
+        font-size: 14px;
+        text-transform: uppercase;
+        margin: 10px 0;
+    }
+
+    &-link,
+    &-info {
+        font-size: 12px;
+        color: #303030;
+        padding: 6px 0;
+        // margin: 3px 0;
+    }
+}
+
 // Лоадер
 .loader {
     position: absolute;
@@ -108,7 +162,7 @@ a {
     bottom: 0;
     left: 0;
     color: #fff;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: none;
     align-items: center;
     justify-content: center;

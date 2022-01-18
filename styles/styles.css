@@ -36,14 +36,14 @@ a {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-bottom: 30px;
-  font-family: 'Myriad Pro', sans-serif;
+  font-family: "Myriad Pro", sans-serif;
   font-size: 14px;
   color: #303030;
   margin-bottom: 30px;
 }
 
 .navigation-head::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -114,6 +114,63 @@ a {
   width: 1140px;
   height: 1px;
   margin: 0 auto 30px;
+}
+
+.footer-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 15px 0;
+}
+
+.chapter {
+  color: #303030;
+  padding-bottom: 15px;
+}
+
+.chapter-wrap {
+  width: calc(100% / 3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.chapter-wrap.col-line {
+  position: relative;
+}
+
+.chapter-wrap.col-line::before, .chapter-wrap.col-line::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  background-color: #e5e5e5;
+}
+
+.chapter-wrap.col-line::before {
+  left: 0;
+}
+
+.chapter-wrap.col-line::after {
+  right: 0;
+}
+
+.chapter-title {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.chapter-link, .chapter-info {
+  font-size: 12px;
+  color: #303030;
+  padding: 6px 0;
 }
 
 .loader {

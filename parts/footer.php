@@ -47,12 +47,18 @@
                     Сайт разработан в inordic.ru
                 </div>
                 <div class="chapter-info">
-                    2018 Все права защищены
+                    2018 &copy; Все права защищены
                 </div>
-                <div class="chapter-info">
-                    <a href="#" class="chapter-social icon-twitter">t</a>
-                    <a href="#" class="chapter-social icon-facebook">f</a>
-                    <a href="#" class="chapter-social icon-instagram">i</a>
+                <div class="chapter-media">
+                    <a href="https:\\twitter.com" class="chapter-social">
+                        <i class="icon-icons8-"></i>
+                    </a>
+                    <a href="https:\\www.facebook.com" class="chapter-social">
+                    <i class="icon-icons8-facebook-f"></i>
+                    </a>
+                    <a href="https:\\instagram.com" class="chapter-social">
+                    <i class="icon-icons8-instagram-"></i>
+                    </a>
                 </div>
             </div>
         </div>

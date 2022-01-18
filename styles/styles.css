@@ -1,5 +1,6 @@
 @charset "UTF-8";
 /* Общие стили для всех страниц */
+@import url(./socialfont.css);
 * {
   margin: 0;
   padding: 0;
@@ -128,7 +129,6 @@ a {
 
 .chapter {
   color: #303030;
-  padding-bottom: 15px;
 }
 
 .chapter-wrap {
@@ -170,7 +170,31 @@ a {
 .chapter-link, .chapter-info {
   font-size: 12px;
   color: #303030;
-  padding: 6px 0;
+  padding: 3px 0;
+}
+
+.chapter-media {
+  font-size: 14px;
+  color: #303030;
+  margin: 16px 0;
+}
+
+.chapter-social {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  line-height: 30px;
+  color: #303030;
+  border: #303030 solid 1px;
+  margin-right: 14px;
+  -webkit-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+}
+
+.chapter-social:hover {
+  background-color: #303030;
+  color: #fff;
 }
 
 .loader {

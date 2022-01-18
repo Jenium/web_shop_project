@@ -20,6 +20,7 @@ a {
 .wrapper {
   background-color: #fff;
   max-width: 1200px;
+  padding: 36px 30px;
   margin: 0 auto;
 }
 
@@ -34,7 +35,7 @@ a {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 36px 30px;
+  padding-bottom: 30px;
   font-family: 'Myriad Pro', sans-serif;
   font-size: 14px;
   color: #303030;
@@ -45,7 +46,7 @@ a {
   content: '';
   position: absolute;
   bottom: 0;
-  width: 1140px;
+  width: 100%;
   height: 1px;
   background-color: #e5e5e5;
 }

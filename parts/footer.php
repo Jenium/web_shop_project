@@ -54,10 +54,10 @@
                         <i class="icon-icons8-"></i>
                     </a>
                     <a href="https:\\www.facebook.com" class="chapter-social">
-                    <i class="icon-icons8-facebook-f"></i>
+                        <i class="icon-icons8-facebook-f"></i>
                     </a>
                     <a href="https:\\instagram.com" class="chapter-social">
-                    <i class="icon-icons8-instagram-"></i>
+                        <i class="icon-icons8-instagram-"></i>
                     </a>
                 </div>
             </div>

@@ -53,9 +53,29 @@ a {
     align-items: center;
 
     &-item {
+        position: relative;
         margin: 0 5px;
         padding: 10px;
         color: #303030;
+
+        &.text {
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 8px;
+                width: 0;
+                height: 1px;
+                background-color: #303030;
+                margin: 0 auto;
+                transition: 0.6s ease;
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+        }
 
         &.logo {
             background: #000 url("../images/icons/logo.jpg") no-repeat;
@@ -147,9 +167,26 @@ a {
 
     &-link,
     &-info {
+        position: relative;
         font-size: 12px;
         color: #303030;
         padding: 3px 0;
+    }
+
+    &-link::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 0;
+        height: 1px;
+        background-color: #303030;
+        // margin: 0 auto;
+        transition: 0.5s ease;
+    }
+    &-link:hover::after {
+        width: 100%;
     }
 
     &-media {
@@ -167,7 +204,7 @@ a {
         color: #303030;
         border: #303030 solid 1px;
         margin-right: 14px;
-        transition: .5s ease-in-out;
+        transition: 0.5s ease-in-out;
 
         &:hover {
             background-color: #303030;

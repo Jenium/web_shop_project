@@ -24,11 +24,11 @@
         <div class="navigation-head">
             <div class="menu">
                 <a href="#" class="menu-item logo"></a>
-                <a href="#" class="menu-item">Женщинам</a>
-                <a href="#" class="menu-item">Мужчинам</a>
-                <a href="#" class="menu-item">Детям</a>
-                <a href="#" class="menu-item">Новинки</a>
-                <a href="#" class="menu-item">О нас</a>
+                <a href="#" class="menu-item text">Женщинам</a>
+                <a href="#" class="menu-item text">Мужчинам</a>
+                <a href="#" class="menu-item text">Детям</a>
+                <a href="#" class="menu-item text">Новинки</a>
+                <a href="#" class="menu-item text">О нас</a>
             </div>
             <div class="account">
                 <a class="account-logining" href="#">
@@ -37,7 +37,7 @@
                 </a>
                 <a class="account-logining" href="#">
                     <div class="account-logining-icon icon-basket"></div>
-                    <span>Корзина(0)</span>
+                    <span>Корзина (0)</span>
                 </a>
             </div>
         </div>

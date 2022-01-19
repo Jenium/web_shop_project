@@ -6,7 +6,9 @@
         'products' => []
     ];
 
-    $sql_products = "SELECT * FROM products";
+    $sql_products = "SELECT products.* FROM products 
+    INNER JOIN product_category ON products.id = product_category.product_id 
+    WHERE product_category.category_id ='{$_GET['category_id']}'";
 
     $result_products = mysqli_query($link, $sql_products);
 

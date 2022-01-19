@@ -34,7 +34,8 @@
     <div class="product-name"><?= $template['name'] ?></div>
     <div class="product-price"><?= $template['price'] ?> руб.</div>
     <div class="product-description"><?= $template['description'] ?></div>
-    <div class="product-btn">Добавить в корзину</div>
+
+    <div class="product-btn" data-product-id="<?= $template['id'] ?>">Добавить в корзину</div>
 </div>
 
 <?php

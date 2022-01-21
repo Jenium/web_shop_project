@@ -1,0 +1,201 @@
+.heading {
+    color: #303030;
+    text-align: center;
+    padding: 52px 0;
+
+    &-title {
+        font-family: "OpenSans", Helvetica, sans-serif;
+        font-size: 64px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 22px 0;
+    }
+
+    &-undertitle {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+        font-size: 24px;
+        color: #606060;
+        margin-bottom: 70px;
+    }
+
+    &-btn {
+        display: inline-block;
+        padding: 20px 40px;
+        font-size: 12px;
+        text-transform: uppercase;
+        margin: 0 auto;
+        border: 1px solid #606060;
+        cursor: pointer;
+        transition: 0.5s ease;
+
+        &:hover {
+            background-color: #606060;
+            color: #fff;
+        }
+    }
+}
+
+.banner {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+
+    &-item {
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px;
+        background: #c1c1c1 center no-repeat;
+        background-size: cover;
+        font-family: Georgia, "Times New Roman", Times, serif;
+
+        &::before {
+            content: "";
+            display: block;
+            padding-top: 100%;
+        }
+
+        &-attention {
+            position: relative;
+            width: 30px;
+            height: 30px;
+            margin: 0 auto 20px;
+            background: url("../images/icons/attention-sign-outline.png") center no-repeat;
+            background-size: contain;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                height: 1px;
+                width: 20px;
+                background: #fff;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+            &::before {
+                left: -30px;
+            }
+
+            &::after {
+                right: -30px;
+            }
+        }
+
+        &-text1 {
+            font-family: "OpenSans", Helvetica, sans-serif;
+            text-transform: uppercase;
+            font-size: 22px;
+        }
+
+        &-text2 {
+            font-size: 18px;
+            text-transform: uppercase;
+            font-style: italic;
+            line-height: 26px;
+        }
+
+        &-text3 {
+            font-size: 14px;
+            font-style: italic;
+            line-height: 20px;
+        }
+
+        &-arrow {
+            position: relative;
+            width: 30px;
+            height: 2px;
+            background-color: #fff;
+            margin: 0 auto 15px;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                width: 8px;
+                height: 8px;
+                border-left: 2px solid #fff;
+                border-bottom: 2px solid #fff;
+                transform: rotate(45deg);
+                margin: auto;
+            }
+        }
+    }
+}
+
+.subscribe {
+    padding: 200px 0;
+    text-align: center;
+    color: #303030;
+
+    &-title {
+        font-family: "OpenSans", Helvetica, sans-serif;
+        font-size: 30px;
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 20px 0;
+    }
+
+    &-undertitle {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+        font-size: 18px;
+        color: #606060;
+        margin-bottom: 50px;
+    }
+
+    &-form {
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        height: 56px;
+
+        &-item {
+            height: 100%;
+            width: 470px;
+            border: 1px solid #959595;
+            border-right: none;
+            outline: none;
+            padding: 15px;
+            font-style: italic;
+        }
+
+        &-btn {
+            height: 100%;
+            padding: 21px 30px;
+            font-size: 10px;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #f68236;
+            border: 1px solid #e67429;
+            cursor: pointer;
+            transition: 0.5s ease;
+    
+            &:hover {
+                background-color: #e67429;
+            }
+        }
+    }
+
+    &-error {
+        display: none;
+        color: red;
+        font-size: 13px;
+        font-style: italic;
+        
+        &.error-active {
+            display: block;
+        }
+        
+        &-wrap {
+            height: 56px;
+            padding: 20px;
+            
+        }
+    }
+}

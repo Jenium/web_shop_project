@@ -1,5 +1,6 @@
 /* Общие стили для всех страниц */
 
+@import url(./font-opensans.css);
 @import url(./socialfont.css);
 
 * {
@@ -53,37 +54,22 @@ a {
     align-items: center;
 
     &-item {
-        position: relative;
-        margin: 0 5px;
-        padding: 10px;
+        // position: relative;
+        margin: 0 15px;
+        // padding: 10px;
         color: #303030;
-
-        &.text {
-            &::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 8px;
-                width: 0;
-                height: 1px;
-                background-color: #303030;
-                margin: 0 auto;
-                transition: 0.6s ease;
-            }
-
-            &:hover::after {
-                width: 100%;
-            }
-        }
 
         &.logo {
             background: #000 url("../images/icons/logo.jpg") no-repeat;
             background-size: contain;
             width: 42px;
             height: 42px;
-            // display: block;
             margin: 0 48px 0 0;
+            transition: 0.6s ease;
+
+            &:hover {
+                opacity: .8;
+            }
         }
     }
 }
@@ -112,6 +98,28 @@ a {
                 background-image: url("../images/icons/basket.png");
             }
         }
+    }
+}
+
+.underline {
+    position: relative;
+    padding: 10px 0;
+
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 8px;
+        width: 0;
+        height: 1px;
+        background-color: #303030;
+        margin: 0 auto;
+        transition: 0.6s ease;
+    }
+
+    &:hover::after {
+        width: 100%;
     }
 }
 

@@ -130,11 +130,32 @@ a {
     margin: 0 auto 30px;
 }
 
+// Стиль заголовков
+
+.title {
+    font-family: "OpenSans", Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: center;
+    color: #303030;
+    margin: 20px 0 10px;
+}
+
+.undertitle {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 18px;
+    text-align: center;
+    color: #606060;
+    margin-bottom: 50px;
+}
+
 // Разделы в Футере
 .footer-wrap {
     display: flex;
     justify-content: space-between;
-    margin: 15px 0;
+    margin-top: 30px;
 }
 
 .chapter {

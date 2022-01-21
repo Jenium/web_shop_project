@@ -1,0 +1,306 @@
+@import url(./animation.css);
+
+.basket {
+    padding-top: 60px;
+    font-family: "OpenSans", Helvetica, sans-serif;
+}
+
+.col {
+    margin-right: 28px;
+
+    &:nth-child(1) {
+        width: 100px;
+        flex: none;
+    }
+
+    &:nth-child(2) {
+        min-width: 200px;
+        flex: 1;
+    }
+
+    &:nth-child(3) {
+        text-align: center;
+        width: 70px;
+    }
+
+    &:nth-child(4) {
+        width: 100px;
+        text-align: center;
+    }
+
+    &:nth-child(5) {
+        width: 100px;
+        text-align: center;
+    }
+
+    &:last-child {
+        margin-right: 0;
+        text-align: center;
+        width: 60px;
+        // flex: 1;
+    }
+}
+
+.table-head {
+    display: flex;
+    padding: 10px;
+    font-size: 12px;
+    color: #909090;
+    text-transform: uppercase;
+    border-bottom: #e5e5e5 1px solid;
+
+    &-item {
+        display: inline-block;
+    }
+}
+
+.table-row {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: #e5e5e5 1px solid;
+    font-size: 14px;
+
+    ._photo {
+        width: 100px;
+        height: 100px;
+        background: #e5e5e5 center no-repeat;
+        background-size: contain;
+        border: #e5e5e5 1px solid;
+    }
+
+    ._amount {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+    }
+
+    ._delete {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        margin: 0 auto;
+        // border: #303030 solid 1px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 90%;
+            height: 1px;
+            background-color: #303030;
+        }
+
+        &::before {
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            transform: rotate(-45deg);
+        }
+    }
+
+    .count-btn {
+        width: 14px;
+        font-family: "Lato";
+        font-weight: 300;
+        line-height: 14px;
+        color: #fff;
+        background-color: #303030;
+        border: #303030 solid 1px;
+        margin: 3px;
+        cursor: pointer;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.table-footer {
+    height: 60px;
+    width: 100%;
+    margin: 4px 0;
+    background-color: #f9f9f9;
+    padding: 0 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+
+    &-total {
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-right: 100px;
+        margin-left: auto;
+
+        &-summ {
+            font-weight: 600;
+            color: #f68236;
+        }
+    }
+}
+
+.zigzag {
+    height: 170px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &-block {
+        display: flex;
+
+        &-line {
+            position: relative;
+            width: 32px;
+            height: 20px;
+
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                width: 76%;
+                height: 2px;
+                background: #f68236;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+            }
+
+            &::before{
+                left: -4px;
+                transform: rotate(45deg);
+                animation: rotation-r 3s linear infinite alternate;
+            }
+
+            &::after {
+                right: -5px;
+                transform: rotate(-45deg);
+                animation: rotation-l 3s linear infinite alternate;
+            }
+        }
+    }
+}
+
+.delivery {
+    border: #e5e5e5 solid 1px;
+    background-color: #fefefe;
+    padding: 70px 0;
+
+    form {
+        width: 50%;
+        margin: 0 auto;
+        padding: 40px 0;
+    }
+
+    &-item {
+        font-size: 12px;
+        color: #909090;
+        text-transform: uppercase;
+
+        &-form {
+            margin: 10px 0 45px;
+            width: 100%;
+            height: 40px;
+            outline: none;
+            border: #c2c2c2 1px solid;
+            font-size: 12px;
+            color: #909090;
+            padding: 10px;
+        }
+
+        &._half {
+            width: 48%
+        }
+    }
+
+    .half {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.payment {
+    border: #e5e5e5 solid 1px;
+    background-color: #fefefe;
+    padding: 70px 0;
+
+    &-total {
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-size: 18px;
+        color: #606060;
+        width: 300px;
+        margin: 0 auto;
+        padding: 25px;
+
+        &-item {
+            display: flex;
+            // justify-content: center;
+            margin: 15px 0;
+        }
+
+        &-text {
+            text-align: right;
+            width: 50%;
+            margin-right: 20px;
+
+        }
+
+        &-number {
+            font-style: italic;
+        }
+    }
+
+    form {
+        width: 50%;
+        margin: 0 auto;
+        padding: 40px 0 30px;
+    }
+
+    &-item {
+        font-size: 12px;
+        color: #909090;
+        text-transform: uppercase;
+
+        &-form {
+            margin: 10px 0 40px;
+            width: 100%;
+            height: 40px;
+            outline: none;
+            border: #c2c2c2 1px solid;
+            font-size: 12px;
+            color: #909090;
+            padding: 10px;
+        }
+
+        &-btn {
+            height: 100%;
+            padding: 18px 60px;
+            font-size: 12px;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #f68236;
+            border: 1px solid #e67429;
+            margin: 0 auto;
+            display: block;
+            cursor: pointer;
+            transition: 0.5s ease;
+    
+            &:hover {
+                background-color: #e67429;
+            }
+        }
+    }
+}

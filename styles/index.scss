@@ -133,21 +133,21 @@
     text-align: center;
     color: #303030;
 
-    &-title {
-        font-family: "OpenSans", Helvetica, sans-serif;
-        font-size: 30px;
-        font-weight: normal;
-        text-transform: uppercase;
-        margin: 20px 0;
-    }
+    // &-title {
+    //     font-family: "OpenSans", Helvetica, sans-serif;
+    //     font-size: 30px;
+    //     font-weight: normal;
+    //     text-transform: uppercase;
+    //     margin: 20px 0;
+    // }
 
-    &-undertitle {
-        font-family: Georgia, "Times New Roman", Times, serif;
-        font-style: italic;
-        font-size: 18px;
-        color: #606060;
-        margin-bottom: 50px;
-    }
+    // &-undertitle {
+    //     font-family: Georgia, "Times New Roman", Times, serif;
+    //     font-style: italic;
+    //     font-size: 18px;
+    //     color: #606060;
+    //     margin-bottom: 50px;
+    // } //Перенесены в основной стиль для всех страниц.
 
     &-form {
         display: flex;

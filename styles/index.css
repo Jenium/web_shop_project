@@ -144,22 +144,6 @@
   color: #303030;
 }
 
-.subscribe-title {
-  font-family: "OpenSans", Helvetica, sans-serif;
-  font-size: 30px;
-  font-weight: normal;
-  text-transform: uppercase;
-  margin: 20px 0;
-}
-
-.subscribe-undertitle {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-style: italic;
-  font-size: 18px;
-  color: #606060;
-  margin-bottom: 50px;
-}
-
 .subscribe-form {
   display: -webkit-box;
   display: -ms-flexbox;

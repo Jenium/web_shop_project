@@ -103,10 +103,10 @@ include('parts/header.php');
 </section>
 
 <section class="subscribe">
-    <h3 class="subscribe-title">
+    <h3 class="title">
         будь всегда в курсе выгодных предложений
     </h3>
-    <div class="subscribe-undertitle">
+    <div class="undertitle">
         подписывайся и следи за новинками и выгодными предложениями.
     </div>
     <form method="" action="">

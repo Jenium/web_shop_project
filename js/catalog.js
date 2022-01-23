@@ -4,20 +4,24 @@
 class Catalog {
     constructor() {
         this.$catalog = document.querySelector('.catalog');
+        this.$catalogList = this.$catalog.querySelector('.catalog-list');
+        this.$pagination = this.$catalog.querySelector('.catalog-pagination');
         this.products = [];
         this.$loader = this.$catalog.querySelector('.loader');
         // this.categoryId = this.$catalog.getAttribute('data-category-id');
         this.categoryId = this.$catalog.dataset.categoryId;
     }
 
-    load() {
+    load(active = 1) {
         // будет загружать данные по ajax
-        // После загрузке будет вызывать метод render
+        // После загрузки будет вызывать метод render
+
+        this.removeCatalogData();
 
         this.showLoader();
 
         const xhr = new XMLHttpRequest;
-        xhr.open('GET', `/handlers/handler_catalog.php?category_id=${this.categoryId}`);
+        xhr.open('GET', `/handlers/handler_catalog.php?category_id=${this.categoryId}&page=${active}`);
         xhr.send();
 
         xhr.addEventListener('load', () => {
@@ -25,7 +29,7 @@ class Catalog {
             
             // console.log(response);
             
-            response.forEach((item) => {
+            response.products.forEach((item) => {
                 this.products.push(
                     new Product(
                         item.id, 
@@ -38,6 +42,7 @@ class Catalog {
             });
             
             this.render();
+            this.renderPaginnation(response.pagination);
         });
     }
 
@@ -49,12 +54,59 @@ class Catalog {
         this.$loader.classList.remove('show');
     }
 
+    removeCatalogData() {
+        /*
+        * методы очистки элементов
+        * 
+        * числовая переменная count = 0;
+        * строковая переменная text = '';
+        * переменная с массивом arr = [];
+        * 
+        */
+
+        this.$catalogList.innerHTML = '';
+        this.$pagination.innerHTML = '';
+        this.products = [];
+    }
+
+    renderPaginnation(pagination) {
+
+        for (let i = 1; i <= pagination.count; i++) {
+            let $paginationItem = document.createElement('div');
+            $paginationItem.classList.add('catalog-pagination-item');
+            $paginationItem.innerHTML = i;
+            $paginationItem.dataset.page = i;
+            
+            // Добавляем класс active
+            if (i === pagination.active) {
+                $paginationItem.classList.add('_active');
+            }
+            
+            this.$pagination.append($paginationItem);
+            
+            $paginationItem.addEventListener('click', (e) => {
+                // Получили элемент по которому кликнули
+                const target = e.target;
+
+                // Удаляем класс active у всех элементов пагинации
+                this.$pagination.querySelectorAll('.catalog-pagination-item').forEach(item => {
+                    item.classList.remove('_active');
+                });
+
+                // Добавляем класс active активному элементу пагинации
+                target.classList.add('_active');
+                
+                // Вызываем загрузку каталога
+                this.load(target.dataset.page);
+            });
+        }
+    }
+
     render() {
         // Отрисовывает карточку товара
-        const $catalogList = this.$catalog.querySelector('.catalog-list');
 
         this.products.forEach((item) => {
-            $catalogList.append(item.getElement());
+            this.$catalogList.append(item.getElement());
         });
 
         this.hideLoader();

@@ -68,7 +68,8 @@ a {
             transition: 0.6s ease;
 
             &:hover {
-                opacity: .8;
+                // opacity: .95;
+                transform: scale(1.1);
             }
         }
     }

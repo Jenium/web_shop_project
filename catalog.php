@@ -38,10 +38,9 @@ $category = mysqli_fetch_assoc($result);
         <form method="" action="">
             <select class="form-field" name="category">
                 <option disabled selected style="display: none;">Категория</option>
-                <option value="women">Женщинам</option>
-                <option value="men">Мужчинам</option>
-                <option value="children">Детям</option>
-                <option value="new">Новинки</option>
+                <option value="jackets">Куртки</option>
+                <option value="sneakers">Кеды</option>
+                <option value="jeans">Джинсы</option>
             </select>
             <select class="form-field" name="size">
                 <option selected disabled hidden>Размер</option>
@@ -65,10 +64,7 @@ $category = mysqli_fetch_assoc($result);
     </div>
 
     <div class="catalog-pagination">
-        <div class="catalog-pagination-item _active">1</div>
-        <div class="catalog-pagination-item">2</div>
-        <div class="catalog-pagination-item">3</div>
-        <div class="catalog-pagination-item">4</div>
+    
     </div>
 
     <div class="loader">Загрузка...</div>

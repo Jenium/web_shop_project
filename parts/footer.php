@@ -5,13 +5,13 @@
                 <h4 class="chapter-title">
                     Коллекции
                 </h4>
-                <a href="#" class="chapter-link">
+                <a href="/catalog.php?category_id=1" class="chapter-link">
                     Женщинам (1725)
                 </a><br>
-                <a href="#" class="chapter-link">
+                <a href="/catalog.php?category_id=2" class="chapter-link">
                     Мужчинам (635)
                 </a><br>
-                <a href="#" class="chapter-link">
+                <a href="/catalog.php?category_id=3" class="chapter-link">
                     Детям (2514)
                 </a><br>
                 <a href="#" class="chapter-link">

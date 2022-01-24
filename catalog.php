@@ -1,25 +1,25 @@
-<?php 
+<?php
 
-    // Каталог товаров
+// Каталог товаров
 
 
-    $header_config = [
-        'title' => 'Каталог товаров',
-        'style' => 'catalog.css'
-    ];
+$header_config = [
+    'title' => 'Каталог товаров',
+    'style' => 'catalog.css'
+];
 
-    include('parts/header.php');
+include('parts/header.php');
 
-    $category_id = 1;
+$category_id = 1;
 
-    if (!empty($_GET['category_id'])) {
-        $category_id = (int) $_GET['category_id'];
-    }
+if (!empty($_GET['category_id'])) {
+    $category_id = (int) $_GET['category_id'];
+}
 
-    $sql_category = "SELECT * FROM categories WHERE id='{$category_id}'";
-    $result = mysqli_query($link, $sql_category);
+$sql_category = "SELECT * FROM categories WHERE id='{$category_id}'";
+$result = mysqli_query($link, $sql_category);
 
-    $category = mysqli_fetch_assoc($result);
+$category = mysqli_fetch_assoc($result);
 
 ?>
 
@@ -32,20 +32,24 @@
             Все товары
         </div>
     </div>
-    
+
     <div class="catalog-list">
-        
+
     </div>
 
-    <div class="loader">Загрузка...</div>
+    <div class="loader">
+        <div class="loader-box">
+            Загрузка...
+        </div>
+    </div>
 </div>
 
 <?php
 
-    $footer_config = [
-        'script' => 'catalog.js'
-    ];
+$footer_config = [
+    'script' => 'catalog.js'
+];
 
-    include('parts/footer.php');
+include('parts/footer.php');
 
 ?>

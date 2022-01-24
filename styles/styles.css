@@ -2,6 +2,7 @@
 /* Общие стили для всех страниц */
 @import url(./font-opensans.css);
 @import url(./socialfont.css);
+@import url(./animation.css);
 * {
   margin: 0;
   padding: 0;
@@ -269,8 +270,8 @@ a {
   right: 0;
   bottom: 0;
   left: 0;
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
+  color: #606060;
+  background-color: rgba(0, 0, 0, 0.025);
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -284,5 +285,36 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.loader-box {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 115px;
+  height: 115px;
+  -webkit-transition: 1s;
+  transition: 1s;
+  overflow: hidden;
+}
+
+.loader-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  border: #606060 2px solid;
+  margin: auto;
+  -webkit-animation: preload 1.5s linear;
+          animation: preload 1.5s linear;
 }
 /*# sourceMappingURL=styles.css.map */

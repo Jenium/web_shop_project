@@ -23,3 +23,9 @@
         right: -5px;    
     }
 }
+
+@keyframes preload {
+    100% {
+        transform: rotate(40deg);
+    }
+}

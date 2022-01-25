@@ -25,7 +25,7 @@ include('parts/header_conf.php');
         <header>
             <div class="navigation-head">
                 <nav class="menu">
-                    <a href="#" class="menu-item logo"></a>
+                    <a href="/" class="menu-item logo"></a>
                     <a href="/catalog.php?category_id=1" class="menu-item underline">Женщинам</a>
                     <a href="/catalog.php?category_id=2" class="menu-item underline">Мужчинам</a>
                     <a href="/catalog.php?category_id=3" class="menu-item underline">Детям</a>
@@ -37,7 +37,7 @@ include('parts/header_conf.php');
                         <div class="account-logining-icon icon-login"></div>
                         <span class="underline">Войти</span>
                     </a>
-                    <a class="account-logining" href="#">
+                    <a class="account-logining" href="/basket.php">
                         <div class="account-logining-icon icon-basket"></div>
                         <span class="underline">Корзина <span class="counter">(0)</span></span>
                     </a>

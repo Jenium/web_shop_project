@@ -1,15 +1,37 @@
 .catalog {
     position: relative;
     min-height: 100vh;
+    font-family: "OpenSans", Helvetica, sans-serif;
 
     &-header {
         text-align: center;
         padding: 30px 0;
     }
 
+    form {
+        margin-bottom: 35px;
+    }
+    
+    .form-field {
+        width: 180px;
+        height: 20px;
+        font-style: italic;
+        font-family: Georgia, "Times New Roman", Times, serif;
+        font-style: italic;
+        font-size: 14px;
+        color: #606060;
+        pad: 6px 0;
+        margin: 0 14px;
+        outline: none;
+        border: none;
+        border-bottom: #303030 solid 1px;
+        cursor: pointer;
+    }
+
     &-list {
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        // justify-content: space-between;
     }
 
     &-item {
@@ -17,8 +39,22 @@
         text-align: center;
         cursor: pointer;
         color: black;
+        margin: 0 75px 40px 0;
         text-decoration: none;
         transition: .5s ease-in-out;
+
+        &:nth-child(4) {
+            margin-right: 0;
+        }
+        &:nth-child(8) {
+            margin-right: 0;
+        }
+        &:nth-child(12) {
+            margin-right: 0;
+        }
+        &:nth-child(16) {
+            margin-right: 0;
+        }
 
         &:hover {
             transform: scale(1.05);
@@ -35,6 +71,37 @@
         &__name {
             margin: 30px 0 10px;
             font-weight: bold;
+        }
+    }
+
+    &-pagination {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 200px;
+        text-align: center;
+        font-family: 'Lato';
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 25px;
+            height: 25px;
+            color: #fff;
+            background-color: #303030;
+            margin: 0 3px;
+            cursor: pointer;
+            transition: .4s ease;
+
+            &:hover {
+                opacity: .6;
+            }
+            
+            &._active {
+                background-color: #fff;
+                color: #303030;
+                border: #303030 1px solid;
+            }
         }
     }
 }

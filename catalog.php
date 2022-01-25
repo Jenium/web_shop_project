@@ -24,16 +24,47 @@ $category = mysqli_fetch_assoc($result);
 ?>
 
 <div class="catalog" data-category-id="<?= $category['id'] ?>">
+    <div class="breadcrumbs">
+        главная / <?= $category['name'] ?>
+    </div>
     <div class="catalog-header">
-        <h1 class="catalog-title">
+        <h1 class="title">
             <?= $category['name'] ?>
         </h1>
-        <div class="catalog-subtitle">
+        <div class="undertitle">
             Все товары
         </div>
+
+        <form method="" action="">
+            <select class="form-field" name="category">
+                <option disabled selected style="display: none;">Категория</option>
+                <option value="jackets">Куртки</option>
+                <option value="sneakers">Кеды</option>
+                <option value="jeans">Джинсы</option>
+            </select>
+            <select class="form-field" name="size">
+                <option selected disabled hidden>Размер</option>
+                <option value="">S</option>
+                <option value="">M</option>
+                <option value="">L</option>
+            </select>
+            <select class="form-field" name="price">
+                <option selected disabled hidden>Стоимость</option>
+                <option></option>
+                <option value="">0-1000 руб.</option>
+                <option value="">1000-3000 руб.</option>
+                <option value="">3000-6000 руб.</option>
+                <option value="">6000-20000 руб.</option>
+            </select>
+        </form>
     </div>
 
     <div class="catalog-list">
+
+
+    </div>
+
+    <div class="catalog-pagination">
 
     </div>
 
